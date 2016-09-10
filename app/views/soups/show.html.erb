@@ -1,0 +1,11 @@
+<h1><%= @soup.name =%></h1>
+
+<% if @soup.featured? %>
+<p>This soup is AWESOME</p>
+<% else %>
+<p>This soup SUCKS</p>
+<% end %>
+
+<% if params[:admin] == "true" %>
+<p><%= link_to "Toggle Featured", toggle_featured_path(@soup) %></p>
+<% end %>
