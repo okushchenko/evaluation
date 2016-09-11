@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :zombies
   resources :categories, :soups
 
   root to: "categories#index"
